@@ -15,7 +15,7 @@
 &-image2 {
     height: 24px;
     width: 24px;
-    background-image: url(/assets/images/heart.webp);
+    background-image: url('../images/heart.webp');
     position: absolute;
     left: auto;
     top: 10px;
@@ -39,12 +39,12 @@
     }
     
     &::before {
-        background-image: url(/assets/images/heart-h.webp);
+        background-image: url('../images/heart-h.webp');
     }
     
 
     &::after {
-        background-image: url(/assets/images/heart-a.webp);
+        background-image: url('../images/heart-a.webp');
     }
     
 
