@@ -18,14 +18,14 @@
 
 @media (max-width: 1279px) and (min-width: 1024px) {
   .block1-back {
-    background-image: url(/assets/images/sales.webp);
+    background-image: url('../images/sales.webp');
     height: 40vh;
   }
 }
 
 @media (max-width: 1023px) and (min-width: 768px) {
   .block1-back {
-    background-image: url(/assets/images/sales2.webp);
+    background-image: url('../images/sales2.webp');
     height: 25vh;
     // background-size: cover;
     background-position: center;
@@ -34,7 +34,7 @@
 
 @media (max-width: 767px) and (min-width: 481px) {
   .block1-back {
-    background-image: url(/assets/images/sales3.webp);
+    background-image: url('../images/sales3.webp');
     height: 25vh;
     background-size: cover;
     background-position: center;
@@ -43,7 +43,7 @@
 
 @media (max-width: 480px) and (min-width: 376px) {
   .block1-back {
-    background-image: url(/assets/images/sales3.webp);
+    background-image: url('../images/sales3.webp');
     height: 20vh;
     background-size: cover;
     background-position: center;
@@ -52,7 +52,7 @@
 
 @media (max-width: 375px) {
   .block1-back {
-    background-image: url(/assets/images/sales3.webp);
+    background-image: url('../images/sales3.webp');
     height: 18vh;
     background-size: cover;
     background-position: center;
