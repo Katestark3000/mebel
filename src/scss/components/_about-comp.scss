@@ -1,0 +1,121 @@
+.comp {
+  width: 90%;
+  margin: 0 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  &-title {
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+
+  &-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  &-tab {
+    font-size: 18px;
+    font-weight: 600;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color .3s;
+
+    &.active {
+      color: var(--gold);
+    }
+  }
+
+  /* Этажи */
+  &-floor {
+    display: none;
+    flex-wrap: wrap;
+    gap: 40px;
+    // justify-content: space-between;
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  /* Карточки */
+  &-block {
+    width: 23%;
+    height: 200px;
+    border: 1px solid var(--gold);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}
+
+
+
+
+@media (max-width: 1024px) {
+  .comp {
+
+
+    &-floor {
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    &-block {
+      width: 30%;
+      height: 120px;
+    }
+  }
+}
+
+
+@media (max-width: 767px) {
+  .comp {
+    &-title {
+      font-size: 18px;
+    }
+
+    &-tab {
+      font-size: 16px;
+
+    }
+
+    &-floor {
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    &-block {
+      width: 30%;
+      height: 120px;
+    }
+  }
+}
+
+
+@media (max-width: 480px) {
+  .comp {
+    &-title {
+      font-size: 18px;
+    }
+
+    &-tab {
+      font-size: 16px;
+
+    }
+
+    &-floor {
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    &-block {
+      width: 45%;
+      height: 120px;
+    }
+  }
+}

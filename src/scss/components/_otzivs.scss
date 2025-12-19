@@ -1,0 +1,61 @@
+.otzivs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 40px;
+
+    &-text {
+        text-align: left;
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    &-btn {
+        font-family: Montserrat;
+        font-weight: 600;
+        font-style: SemiBold;
+        font-size: 18px;
+        text-align: center;
+
+    }
+
+    &-st {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-str {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+
+    &-znak {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1279px) and (min-width: 768px) {
+    .otzivs-str {
+        justify-content: center;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .otzivs {
+        gap: 30px;
+
+        &-text {
+            font-size: 18px;
+        }
+    }
+
+    .otzivs-str {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

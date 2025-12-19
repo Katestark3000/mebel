@@ -1,0 +1,46 @@
+.podborki {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  &-str {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+
+  }
+}
+
+// MOBILE: ≤767px
+@media (max-width: 767px) {
+  .podborki-str {
+    flex-direction: column;
+    gap: 15px;
+
+    .podborki {
+      width: 100%; // одна карточка на строку
+    }
+  }
+}
+
+// TABLET: 768–1279px
+@media (min-width: 768px) and (max-width: 1279px) {
+  .podborki-str {
+    justify-content: space-between;
+    gap: 20px;
+
+    .podborki {
+      width: calc(50% - 10px); // 2 карточки на строку
+    }
+  }
+}
+
+// DESKTOP: ≥1280px
+@media (min-width: 1280px) {
+  .podborki-str {
+    .podborki {
+      width: calc((100% - 40px) / 3); // 3 карточки на строку
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.catal {
+    width: 90%;
+    margin: auto 5%;
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+
+    &-title {
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    .soft {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        &-str{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &-strs {
+
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+    }
+
+
+}
+
+@media (max-width: 1279px) and (min-width: 768px) {
+    .soft-str {
+        justify-content: center;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .soft-str {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

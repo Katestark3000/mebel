@@ -1,0 +1,31 @@
+// ==== 1. Utils ====
+@use 'utils/variables';
+
+// ==== 2. Base styles ====
+@use 'base/reset';
+@use 'base/typography';
+@use 'base/layout';
+
+// ==== 3. Layou ====
+@use 'layout/container';
+
+// ==== 4. Components ====
+@use 'components/block-discover';
+@use 'components/btn-more';
+@use 'components/contant-catal';
+@use 'components/content-form';
+@use 'components/content';
+@use 'components/footer';
+@use 'components/header';
+@use 'components/otziv';
+@use 'components/otzivs';
+@use 'components/podborki';
+@use 'components/content-concatc';
+@use 'components/cont-catalog';
+@use 'components/cont-soft';
+@use 'components/about-comp';
+@use 'components/cont-cart';
+@use 'components/enter';
+@use 'components/single-product';
+@use 'components/cont-fav';
+@use 'components/otziv2';

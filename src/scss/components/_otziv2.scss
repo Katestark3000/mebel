@@ -1,0 +1,151 @@
+.navss {
+    width: 23%;
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    position: relative;
+
+    &-image1 {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    &-image2 {
+        height: 24px;
+        width: 24px;
+        background-image: url(/assets/images/heart-a.webp);
+        position: absolute;
+        left: auto;
+        top: 10px;
+        right: 10px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transition: opacity 0.5s ease;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+
+        &::before {
+            background-image: url(/assets/images/heart-h.webp);
+        }
+
+
+        &::after {
+            background-image: url(/assets/images/heart-a.webp);
+        }
+
+
+        &:hover {
+            &::before {
+                opacity: 1;
+            }
+        }
+
+
+        &:active {
+            &::before {
+                opacity: 0;
+            }
+
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &-text {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &-title {
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    &-title1 {
+        font-weight: 600;
+        font-size: 15px;
+        background-color: var(--green);
+        color: white;
+        padding: 5px 10px;
+        width: min-content;
+        white-space: nowrap;
+        border-radius: 10px;
+    }
+
+    &-btn {
+        padding: 10px;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 20px;
+        text-align: center;
+        background-color: var(--gold);
+        color: white;
+        transition: all 0.5s ease;
+
+        &:hover {
+            background-color: var(--t-gold);
+
+
+        }
+
+
+    }
+}
+
+@media (max-width: 1279px) and (min-width: 768px) {
+    .navss {
+        width: 48%; // две в ряд
+        min-width: auto;
+
+        &-image1 {
+            height: 150px;
+        }
+
+        &-title {
+            font-size: 17px;
+        }
+
+        &-title1 {
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .navss {
+        width: 100%; // одна в ряд
+        min-width: auto;
+
+        &-image1 {
+            height: 180px;
+        }
+
+        &-title {
+            font-size: 17px;
+        }
+
+        &-title1 {
+            font-size: 14px;
+        }
+
+        &-title2 {
+            font-size: 15px;
+        }
+    }
+}

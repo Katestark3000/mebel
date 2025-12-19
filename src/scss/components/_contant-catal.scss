@@ -1,0 +1,125 @@
+.contant {
+    display: flex;
+    gap: 40px;
+    width: 90%;
+    margin: 0 5%;
+
+    &-left {
+        width: 25%;
+    }
+
+    &-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+
+        &-str {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+
+
+        }
+
+
+    }
+}
+/* --- обычный каталог слева --- */
+.cataloge-desktop {
+    display: block;
+
+    @media (max-width: 767px) {
+        display: none;
+    }
+}
+
+/* --- кнопка Каталог на мобильных --- */
+.catalog-open-btn {
+    display: none;
+    width: 100%;
+
+    @media (max-width: 767px) {
+        display: inline-block;
+        margin-bottom: 20px;
+        padding: 10px 18px;
+        font-size: 18px;
+        background: none;
+        color: var(--text);
+        border: none;
+    }
+}
+
+/* --- затемнение --- */
+.cataloge-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 998;
+}
+
+/* --- модальное окно --- */
+.cataloge-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    width: max-content;
+    overflow: hidden;
+
+    @media (min-width: 768px) {
+        display: none !important; /* не показываем на больших */
+    }
+}
+
+.cataloge-modal-content {
+    background: white;
+    width: auto;
+    max-height: 80%;
+    overflow-y: auto;
+    border-radius: 12px;
+    padding: 20px;
+    position: relative;
+}
+@media (max-width: 1279px) and (min-width: 768px) {
+    .contant {
+        display: flex;
+        gap: 40px;
+        width: 90%;
+        margin: 0 5%;
+
+        &-left {
+            width: 20%;
+        }
+
+    }
+    .contant-right {
+        width: 100%;
+        
+        gap: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+     .contant {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        width: 90%;
+        margin: 0 5%;
+
+        &-left {
+            
+            width: 20%;
+        }
+
+    }
+    .contant-right {
+        width: 100%;
+        
+        gap: 40px;
+    }
+}

@@ -1,0 +1,31 @@
+.btn-more {
+    background-color: transparent;
+    display: flex;
+    text-align: center;
+    border: 1px solid var(--t-grey);
+    gap: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    color: var(--t-grey);
+    transition: all 0.3s ease;
+    display: flex;
+    white-space: nowrap;
+    font-size: 20px;
+    cursor: pointer;
+
+    &:hover {
+        color: var(--gold);
+    }
+
+    &:active {
+        background-color: var(--gold);
+    }
+}
+
+
+@media (max-width: 767px) {
+    .btn-more {
+        font-size: 16px;
+         padding: 10px 5px;
+    }
+}

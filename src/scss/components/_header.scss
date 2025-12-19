@@ -1,0 +1,438 @@
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 20px 5%;
+
+  .str {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .logo {
+    cursor: pointer;
+  }
+
+  .burger {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    display: none;
+  }
+
+  .btn-catag {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: 1px solid var(--t-grey);
+    color: var(--t-grey);
+    background: transparent;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .souch {
+    form {
+      position: relative;
+      width: 420px;
+      height: 42px;
+      border: 1px solid var(--grey);
+      border-radius: 40px;
+      overflow: hidden;
+    }
+
+
+    input,
+    button {
+      border: none;
+      outline: none;
+      background: transparent;
+    }
+
+    input {
+      width: 100%;
+      height: 100%;
+      padding: 0 50px 0 16px;
+    }
+
+    button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 42px;
+      height: 42px;
+      cursor: pointer;
+    }
+
+
+  }
+
+  .ul-icons {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+    transition: color 0.5s ease;
+
+    li {
+      svg path {
+        transition: fill 0.5s ease;
+      }
+
+      &:hover {
+        --heart: var(--t-gold);
+      }
+    }
+
+  }
+
+  .navs {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+
+    &-tex {
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+
+      &:hover {
+        color: var(--gold);
+      }
+    }
+  }
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit;
+
+  a:visited {
+    color: inherit;
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: var(--gold);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 2000;
+  padding: 40px 20px;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  overflow-y: auto;
+
+  &.active {
+    transform: translateX(0);
+  }
+
+  .souch {
+    display: block !important;
+    width: 100%;
+
+
+    form {
+      width: 100%;
+      max-width: 100%;
+      height: 48px;
+      border: 2px solid white;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    input {
+      color: white;
+      font-size: 16px;
+      padding: 0 50px 0 20px;
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+
+    button svg path {
+      fill: white;
+    }
+  }
+
+  .navs {
+    display: flex !important;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+
+    &-tex {
+      font-size: 20px;
+      color: white;
+      text-align: left;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      font-weight: 600;
+
+      a {
+        color: white;
+        display: block;
+        width: 100%;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:hover {
+        color: rgba(255, 255, 255, 0.9);
+      }
+    }
+  }
+
+  .ul-icons {
+    display: flex !important;
+    justify-content: center;
+    gap: 40px;
+
+    padding-top: 10px;
+
+
+    li {
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        transition: background 0.3s ease;
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.2);
+        }
+      }
+
+
+
+      svg path {
+        fill: white !important;
+      }
+    }
+  }
+}
+
+#closer {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2001;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none !important;
+  }
+
+  #closer {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  header {
+    .navs {
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      &-tex {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  header {
+    .str {
+      .souch {
+        display: none;
+      }
+
+      .ul-icons {
+        display: none;
+      }
+    }
+
+    .navs {
+      display: none;
+    }
+
+    .btn-catag {
+      a {
+        display: none;
+      }
+
+      .burger {
+        display: flex;
+        margin-right: 0;
+      }
+    }
+  }
+
+  header {
+    gap: 12px;
+
+    .souch {
+      display: none;
+    }
+
+    .ul-icons {
+      display: none;
+    }
+
+    .navs {
+      display: none;
+    }
+
+    .btn-catag {
+      padding: 5px 8px;
+      font-size: 16px;
+    }
+
+    #form-m {
+      display: flex !important;
+    }
+  }
+
+
+}
+
+@media (max-width: 480px) {
+  .mobile-menu {
+    padding: 30px 15px;
+    gap: 20px;
+
+    .souch form {
+      height: 44px;
+    }
+
+    .navs {
+      gap: 10px;
+
+      &-tex {
+        font-size: 18px;
+        padding: 10px 0;
+      }
+    }
+
+    .ul-icons {
+      gap: 30px;
+
+      li a {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    .burger {
+      display: flex;
+    }
+  }
+
+  header {
+    .btn-catag {
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+
+    .logo svg {
+      width: 150px;
+      height: auto;
+    }
+  }
+}
+
+@media (max-height: 600px) and (orientation: landscape) {
+  .mobile-menu {
+    padding: 20px;
+    gap: 20px;
+
+    .souch {
+      margin-bottom: 10px;
+
+      form {
+        height: 40px;
+      }
+    }
+
+    .navs {
+      gap: 15px;
+
+      &-tex {
+        font-size: 16px;
+        padding: 8px 0;
+      }
+    }
+
+    .ul-icons {
+      padding-top: 10px;
+      gap: 25px;
+    }
+  }
+
+  .burger {
+    display: flex;
+  }
+}
+
+@media (max-width: 1279px) {
+  header {
+    gap: 16px;
+    padding: 16px 3%;
+
+    .souch form {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 998px) {
+  header {
+    gap: 12px;
+
+    .ul-icons {
+      justify-content: center;
+    }
+
+    .navs {
+      display: none;
+    }
+
+    .btn-catag {
+      padding: 5px 8px;
+      font-size: 16px;
+    }
+  }
+}
