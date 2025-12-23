@@ -111,7 +111,9 @@
         text-align: center;
     }
 }
-
+.phone{
+    user-select: all ;
+}
 a {
     text-decoration: none;
     transition: all 0.3s;

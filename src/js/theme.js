@@ -5,17 +5,16 @@ const closeMenu = document.getElementById('closeMenu');
 if (burger && mobileMenu) {
   burger.addEventListener('click', () => {
     mobileMenu.classList.add('active');
-    document.body.style.overflow = 'hidden'; // Блокируем скролл
+    document.body.style.overflow = 'hidden'; 
   });
   
   if (closeMenu) {
     closeMenu.addEventListener('click', () => {
       mobileMenu.classList.remove('active');
-      document.body.style.overflow = ''; // Восстанавливаем скролл
+      document.body.style.overflow = ''; 
     });
   }
   
-  // Закрытие при клике вне области меню
   document.addEventListener('click', (event) => {
     if (mobileMenu.classList.contains('active') && 
         !mobileMenu.contains(event.target) && 
@@ -25,7 +24,6 @@ if (burger && mobileMenu) {
     }
   });
   
-  // Закрытие при нажатии клавиши Escape
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && mobileMenu.classList.contains('active')) {
       mobileMenu.classList.remove('active');
